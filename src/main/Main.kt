@@ -1,7 +1,7 @@
-import main.solution.Puzzle1
+import main.solution.Puzzle2
 
 fun main() {
-    val puzzle = Puzzle1(readFromRes(Puzzle1.INPUT_FILE_NAME))
+    val puzzle = Puzzle2(readFromRes(Puzzle2.INPUT_FILE_NAME))
     puzzle.printSecondPuzzleAnswer()
 }
 
