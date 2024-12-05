@@ -158,10 +158,7 @@ enum class Direction(
     );
 
     val variantsCount: Int = min(x.size, y.size)
-
 }
 
 private const val XMAS_WORD = "XMAS"
 private const val MAS_WORD = "MAS"
-private const val AM_WORD = "AM"
-private const val AS_WORD = "AS"
