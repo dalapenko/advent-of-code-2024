@@ -1,8 +1,9 @@
-import main.solution.Puzzle3
+import main.solution.Puzzle4
 
 fun main() {
-    val puzzle = Puzzle3(readFromRes(Puzzle3.INPUT_FILE_NAME))
+    val puzzle = Puzzle4(readFromRes(Puzzle4.INPUT_FILE_NAME))
 
+//    puzzle.printFirstPuzzleAnswer()
     puzzle.printSecondPuzzleAnswer()
 }
 
