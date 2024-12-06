@@ -14,10 +14,10 @@ class Puzzle5(inputData: List<String>) : Puzzle(inputData) {
             iterable
                 .mapIndexed(::Pair)
                 .all { (index, number) ->
-                    val prevList = iterable.take(index).toSet()
-                    val prevRequiredList = pageOrder[number] ?: return@all true
+                    val beforePages = iterable.take(index).toSet()
+                    val beforePagesRequired = pageOrder[number] ?: return@all true
 
-                    !prevList.any(prevRequiredList::contains)
+                    !beforePages.any(beforePagesRequired::contains)
                 }
         }
 
@@ -40,10 +40,10 @@ class Puzzle5(inputData: List<String>) : Puzzle(inputData) {
             iterable
                 .mapIndexed(::Pair)
                 .all { (index, number) ->
-                    val prevList = iterable.take(index).toSet()
-                    val prevRequiredList = pageOrder[number] ?: return@all true
+                    val beforePages = iterable.take(index).toSet()
+                    val beforePagesRequired = pageOrder[number] ?: return@all true
 
-                    !prevList.any(prevRequiredList::contains)
+                    !beforePages.any(beforePagesRequired::contains)
                 }
         }
 
