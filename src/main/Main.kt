@@ -4,7 +4,7 @@ fun main() {
     val puzzle = Puzzle6(readFromRes(Puzzle6.INPUT_FILE_NAME))
 
     puzzle.printFirstPuzzleAnswer()
-//    puzzle.printSecondPuzzleAnswer()
+    puzzle.printSecondPuzzleAnswer()
 }
 
 fun readFromRes(fileName: String): List<String> {

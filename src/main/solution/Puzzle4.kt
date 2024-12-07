@@ -121,43 +121,43 @@ class Puzzle4(inputData: List<String>) : Puzzle(inputData) {
         return occurrenceCounter
     }
 
+    private enum class Direction(
+        val x: IntArray,
+        val y: IntArray
+    ) {
+
+        ANY(
+            x = intArrayOf(-1, -1, -1, 0, 0, 1, 1, 1),
+            y = intArrayOf(-1, 0, 1, -1, 1, -1, 0, 1)
+        ),
+
+        DOWN_RIGHT(
+            x = intArrayOf(1),
+            y = intArrayOf(1)
+        ),
+
+        UP_RIGHT(
+            x = intArrayOf(1),
+            y = intArrayOf(-1)
+        ),
+
+        DOWN_LEFT(
+            x = intArrayOf(-1),
+            y = intArrayOf(1)
+        ),
+
+        UP_LEFT(
+            x = intArrayOf(-1),
+            y = intArrayOf(-1)
+        );
+
+        val variantsCount: Int = min(x.size, y.size)
+    }
+
     companion object {
         const val INPUT_FILE_NAME = "puzzle_4_input.txt"
         const val INPUT_TEST_FILE_NAME = "testdata/puzzle_4_input.txt"
     }
-}
-
-enum class Direction(
-    val x: IntArray,
-    val y: IntArray
-) {
-
-    ANY(
-        x = intArrayOf(-1, -1, -1, 0, 0, 1, 1, 1),
-        y = intArrayOf(-1, 0, 1, -1, 1, -1, 0, 1)
-    ),
-
-    DOWN_RIGHT(
-        x = intArrayOf(1),
-        y = intArrayOf(1)
-    ),
-
-    UP_RIGHT(
-        x = intArrayOf(1),
-        y = intArrayOf(-1)
-    ),
-
-    DOWN_LEFT(
-        x = intArrayOf(-1),
-        y = intArrayOf(1)
-    ),
-
-    UP_LEFT(
-        x = intArrayOf(-1),
-        y = intArrayOf(-1)
-    );
-
-    val variantsCount: Int = min(x.size, y.size)
 }
 
 private const val XMAS_WORD = "XMAS"
